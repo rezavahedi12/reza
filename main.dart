@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'homePage.dart';
-void main() => runApp(MyApp());
+import 'package:tvuniversity/MobileDesign/MainScreen.dart';
+import 'HomePage.dart';
+
+void main()=> runApp(MyApp());
 
 class MyApp extends StatelessWidget{
-  Widget build(BuildContext context){
-    return MaterialApp(
-      home:HomePage(),
-      debugShowCheckedModeBanner: false,
-    );
+  @override
+  Widget build(BuildContext context) {
+  
+   return MaterialApp(
+     home: Directionality(textDirection: TextDirection.rtl, child: MainMobileDesign()),
+     debugShowCheckedModeBanner: false,
+   );
   }
 }
